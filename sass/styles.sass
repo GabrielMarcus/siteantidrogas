@@ -1,0 +1,223 @@
+@use 'variables'
+@use 'mixins'
+
+*
+    font-family: 'Josefin Sans'
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    background-color: variables.$bg-color
+    color: variables.$text-color
+
+    a
+        color: variables.$text-color
+        text-decoration: none
+        transition: .4s
+
+    ul
+        list-style: none
+
+.header
+    display: flex
+    justify-content: space-between
+    @include mixins.container
+
+    @include mixins.mobile
+        padding: 1.1rem
+
+    &-brand // .header-brand
+        color: variables.$primary-color
+        font-size: 3rem
+
+    &-navbar // .header-navbar
+
+        ul
+            height: 100%
+            @include mixins.flex-center
+
+        @include mixins.mobile
+            display: none
+
+        li
+            margin: 0 1rem
+            text-transform: uppercase
+            font-size: .8rem
+
+            .active
+                color: variables.$secondary-color
+
+            a
+                text-align: center
+                
+                &:hover
+                    color: variables.$secondary-color
+
+    &-social-media
+
+        ul
+            @include mixins.flex-center
+            height: 100%
+
+            @include mixins.mobile
+                display: none
+
+            li
+                margin: 0 1rem
+
+                a
+
+                    &:hover
+                        color: variables.$primary-color
+
+.gallery
+    @include mixins.flex-center
+    @include mixins.container
+    flex-wrap: wrap
+    justify-content: space-between
+    padding: 0
+
+    @include mixins.mobile
+        flex-direction: column
+
+    &-card
+        width: 31%
+        height: 400px
+        margin-bottom: 4%
+        @include mixins.flex-center
+        flex-direction: column
+        color: variables.$primary-color
+
+        @include mixins.mobile
+            width: 90%
+            margin-bottom: 6%
+
+        &-btn
+            padding: .6rem 2rem
+            border: 2px solid variables.$primary-color
+            color: variables.$primary-color
+            font-weight: 400
+            text-transform: uppercase
+            letter-spacing: 1px
+
+            &:hover
+                background-color: variables.$primary-color
+                color: variables.$bg-color
+
+#card-1
+    @include mixins.bg-img('img01.png')
+
+#card-2
+    @include mixins.bg-img('img02.png')
+
+#card-3
+    @include mixins.bg-img('img03.png')
+
+#card-4
+    @include mixins.bg-img('img04.png')
+
+#card-5
+    @include mixins.bg-img('img05.png')
+
+#card-6
+    @include mixins.bg-img('img06.png')
+
+#card-7
+    @include mixins.bg-img('img07.png')
+
+#card-8
+    @include mixins.bg-img('img08.png')
+
+#card-9
+    @include mixins.bg-img('img09.png')
+
+#card-10
+    @include mixins.bg-img('img10.png')
+
+#card-11
+    @include mixins.bg-img('img11.png')
+
+#card-12
+    @include mixins.bg-img('img12.png')
+
+#card-13
+    @include mixins.bg-img('img13.png')
+
+#card-14
+    @include mixins.bg-img('img14.png')
+
+#card-15
+    @include mixins.bg-img('img15.png')
+
+footer
+  text-align: center
+  padding-bottom: 2rem
+
+  span
+    font-weight: bold
+    color: variables.$secondary-color
+
+.content
+    @include mixins.container
+    text-align: justify
+
+    @include mixins.mobile
+        width: 90%
+    
+    &-title
+        font-size: 1.5rem
+        text-transform: uppercase
+        margin: 1rem 0rem
+
+    ul
+
+        li
+            margin: 0 1rem
+            list-style-type: circle
+
+    &-referencias
+
+        a
+            transition: .6s
+            
+            &:hover
+                color: variables.$secondary-color
+
+    &-formulario
+
+        form
+
+            row
+                display: flex    
+
+.column
+    float: left
+    width: 50%
+
+.row
+    @include mixins.flex-center
+    float: center
+
+    &:after
+        content: ""
+        display: table
+        clear: both
+
+.formulario-btn
+    input
+        padding: .6rem 2rem
+        border: 2px solid variables.$primary-color
+        color: variables.$primary-color
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 1px
+        background-color: #000
+        margin-top: 4%
+        margin-left: 44%
+        
+
+        &:hover
+            background-color: variables.$primary-color
+            color: variables.$bg-color
+            transition: .6s
